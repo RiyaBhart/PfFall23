@@ -14,3 +14,24 @@
 
 # Problem 5 
 ![5](https://github.com/RiyaBhart/PfFall23/assets/142867648/eb844237-5398-4ea4-9fe4-ee7b63c582bf)
+
+# Problem 6
+![6](https://github.com/RiyaBhart/PfFall23/assets/142867648/a5491f17-a426-4695-8e0f-6762e80ecbb2)
+
+# Problem 7
+![7(1)](https://github.com/RiyaBhart/PfFall23/assets/142867648/5ad7e69a-cd48-431f-bb85-b2a9b4aa168c)
+![7(2)](https://github.com/RiyaBhart/PfFall23/assets/142867648/5da3b432-bff7-4563-a50c-43dc1bd59382)
+
+# Problem 8
+![8](https://github.com/RiyaBhart/PfFall23/assets/142867648/69e466e7-d096-4b8c-b523-62d9ba015700)
+
+# Problem 9
+![9](https://github.com/RiyaBhart/PfFall23/assets/142867648/deeced6e-e6bd-497a-b47b-0f60ba58fbee)
+
+# Problem 10
+![10](https://github.com/RiyaBhart/PfFall23/assets/142867648/52da013b-1e21-4169-ab10-368aa4d8d478)
+
+
+
+
+
