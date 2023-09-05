@@ -1,3 +1,5 @@
+RIYA BHART (23k-0063)
+
 #include <stdio.h>
 #include <math.h>
 
