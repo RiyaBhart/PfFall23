@@ -8,8 +8,8 @@ int main() {
     scanf("%d",&x);
     int y;
     int z;
-    y=x%10;
-    z=x%10000;
+    y=x%1000000;
+    z=x%1000;
     if((y=0) && (z=0) ){ 
         printf("%d",x);
     }// ending if
