@@ -16,7 +16,6 @@ int main() {
     
     printf("\n--Calculating Addition Answers--\n");
     int Addition = firstnumber + secondnumber;
-    float h = Addition;
     
     printf("Answer :%d",Addition);
     
