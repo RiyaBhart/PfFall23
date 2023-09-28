@@ -10,20 +10,20 @@ int main() {
     int z;
     y=x%1000000;
     z=x%1000;
-    if((y=0) && (z=0) ){ 
+    if((y==0) && (z==0) ){ 
         printf("%d",x);
     }// ending if
-    else if (y=1 ){ 
+    else if (y==1 ){ 
         int temp=0;
         y=temp;
         printf("7th bit is now turned off %d",y);
     }//ending else if
-    else if (z=1){ 
+    else if (z==1){ 
         int temp=0;
         z=temp;
         printf("4th bit is now turned off %d",z);
     }//ending else if
-    else if ((y=1) && (z=1) ){ 
+    else if ((y==1) && (z==1) ){ 
         int temp=0;
         y=temp;
         z=temp;
