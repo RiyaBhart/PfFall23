@@ -15,13 +15,15 @@ int main() {
     if(n1!=n2){
         if(n1>n2){
             n1=n1-n2;
+            printf("gcd=%d",n1);
+            gcd=n1;
         }
         else{
             n2=n2-n1;
+            printf("gcd=%d",n2);
+            gcd=n2;
         }
     }
-        printf("gcd=%d",n1);
-        gcd=n1;
         lcm=(x*y)/gcd;
         printf("LCM= %d",lcm);
         return 0;
