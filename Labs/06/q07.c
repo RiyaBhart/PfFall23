@@ -6,12 +6,16 @@
 #include <stdio.h>
 
 int main() {
-    int sum;
-    int arr[]={1,2,3,4,5,6,7,8,9};
-    for(int i=1;i<=9;i++){
-        sum=sum+i;
+    int n;
+    int sum=0;
+    printf("Enter number of values in the array:  ");
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        printf("input the value in array:  ");
+        scanf("%d",&arr[i]);
+        sum=sum+arr[i];
     }
-    printf("the total sum is:  %d",sum);
-
+    printf("Total sum is:  %d",sum);
     return 0;
 }
