@@ -1,3 +1,8 @@
+/** 
+*Programmer : Riya Bhart
+*Desc: Lab07;divison without using dividon operator
+*Date: 10/10/23
+*/
 #include <stdio.h>
 int main(){
 	int x,y,ans=0;
