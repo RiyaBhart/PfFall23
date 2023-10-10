@@ -28,7 +28,7 @@ int main(){
 	answer[1][1]= matrix1[1][0]*matrix2[0][1] + matrix1[1][1]*matrix2[1][1];
 	for(int i=0;i<2;i++){
 		for(int j=0;j<2;j++){
-	printf("%d\t",answer[i][j]);
+	printf("%d\t ",answer[i][j]);
 	}
 	}
 	return 0;
