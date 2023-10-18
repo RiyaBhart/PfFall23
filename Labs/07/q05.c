@@ -1,3 +1,8 @@
+/** 
+*Programmer : Riya Bhart
+*Desc: Lab07; printing a man
+*Date: 14/10/23
+*/
 #include <stdio.h>
 
 int main(){
@@ -7,7 +12,7 @@ int main(){
     //head printing
     for(i=1;i<=n-2;i++){
         for(j=1;j<=n-1;j++){
-        printf("-");
+        printf(" ");
     }
         for(int j=1;j<=n;j++){
         printf("*");
