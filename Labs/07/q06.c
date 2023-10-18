@@ -1,42 +1,32 @@
+/** 
+*Programmer : Riya Bhart
+*Desc: Lab07; code to check frequency
+*Date: 10/10/23
+*/
 #include <stdio.h>
 
-void main()
-{
-    int arr[100], fr[100];
-    int n, i, j, count;
+int main() {
+    int n,i,j,count=1;
+    printf("Input size of matrix: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Input elements in array: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    int freq[1000]={0};
     
-       printf("Input size of array :");
-       scanf("%d",&n);
-   
-       printf("Input elements: ");
-       for(i=0;i<n;i++)
-            {
-	      scanf("%d",&arr[i]);
-		  fr[i] = -1;
-	    }
-    for(i=0; i<n; i++)
-    {
-        count = 1;
-        for(j=1; j<n; j++)
-        {
-            if(arr[i]==arr[j])
-            {
-                count++;
-                fr[j] = 0;
-            }
-        }
+    for (int i = 0; i < n; i++) {
+        freq[arr[i]]++;
+    }
 
-        if(fr[i]!=0)
-        {
-            fr[i] = count;
-        }
+    for (int i = 0; i < n; i++) {
+        if (freq[i] == 0){
+            continue;
+        } 
+    printf("%d occurs %d many times\n",arr[i],freq[i]);
     }
-    printf("\nThe frequency of elements of array : \n");
-    for(i=0; i<n; i++)
-    {
-        if(fr[i]!=0)
-        {
-            printf("%d occurs %d times\n", arr[i], fr[i]);
-        }
-    }
+    
+
+    return 0;
 }
