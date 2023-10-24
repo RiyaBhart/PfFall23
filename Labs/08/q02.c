@@ -1,3 +1,8 @@
+/** 
+*Programmer : Riya Bhart
+*Desc: Lab08: calculator using functions;
+*Date: 24/10/23
+*/
 #include <stdio.h>
 void addition(int x1, int x2){
 	int	x=x1+x2;
