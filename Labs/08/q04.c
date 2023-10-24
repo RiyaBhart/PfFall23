@@ -1,3 +1,8 @@
+/** 
+*Programmer : Riya Bhart
+*Desc: Lab08: checking password using strings
+*Date: 24/10/23
+*/
 #include <stdio.h>
 #include <string.h>
 int main(){
