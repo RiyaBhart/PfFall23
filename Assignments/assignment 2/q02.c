@@ -1,6 +1,6 @@
 /** 
 *Programmer : Riya Bhart
-*Desc: ASSIGNMENT 2; q01
+*Desc: ASSIGNMENT 2; q02
 *Date: 29/10/23
 */
 #include <stdio.h>
