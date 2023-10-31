@@ -1,6 +1,6 @@
 /** 
 *Programmer : Riya Bhart
-*Desc: Lab09;multiplication of two integers using recursion 
+*Desc: Lab09 ; factorial using recursion.
 *Date: 31/10/23
 */
 #include <stdio.h>
