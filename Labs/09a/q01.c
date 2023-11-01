@@ -1,3 +1,7 @@
+/*programmer: Riya Bhart
+  Desc: swapping values using pointers
+  date: 31/10/23
+  */
 #include <stdio.h>
 
 void swap(int *a, int *b){
