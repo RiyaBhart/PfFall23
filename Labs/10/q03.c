@@ -6,53 +6,69 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-int is_prime(int n)
-{
-	// check if prime number
-	for (int i = 2; i*i <= n; i++) 
-	if (!(n % i))
-	return 0;
-	return 1;
-} // end is_prime()
+bool isPrime(int num) {
+    if (num < 2) {
+        return false;
+    }
 
-void show_arr(int** arr, int x, int y)
-{
-	for (int i = 0; i < y; i++) {
-		for (int j = 0; j < x; j++)
-		printf("%-4d", arr[i][j]);
-		printf("\n");
-	}
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
-int **create_arr(int x, int y)
-{
-	int **arr = (int **)malloc(sizeof(int *) * y);
-	for (int i = 0; i < y; i++) 
-	arr[i] = (int *)malloc(sizeof(int) * x);
 
-	for (int i = 0, num = 2; i < y; i++) {
-		for (int j = 0; j < x; j++) {
-			for(;!is_prime(num);num++);
-			arr[i][j] = num++;
-		}
-	}
+void ArrfillPrime(int** array, int r, int c) {
+    int count = 0;
+    int num = 2; 
 
-    return arr;
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            while (!isPrime(num)) {
+                num++;
+            }
+
+            array[i][j] = num;
+            num++;
+        }
+    }
 }
 
-void free_arr(int **arr, int y)
-{
-	
-	for (int i = 0; i < y; i++) free(arr[i]);
-	free(arr);
-} 
+void printArray(int** array, int r, int c) {
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            printf("%4d ", array[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
 
-int main()
-{
-	int x = 5, y = 5, ** arr = create_arr(x, y);
-	show_arr(arr, x, y);
-	free_arr(arr, y);
+int main() {
+    int r, c;
 
-	return 0;
-} 
+    printf("number of rows: ");
+    scanf("%d", &r);
+
+    printf("number of columns: ");
+    scanf("%d", &c);
+
+    // Dynamically allocate memory for a 2D array
+    int**array = (int*)malloc(r * sizeof(int));
+    for (int i = 0; i < r; ++i) {
+        array[i] = (int*)malloc(c * sizeof(int));
+    }
+
+    ArrfillPrime(array, r, c);
+
+    printf("\nArray of prime numbers:\n");
+    printArray(array, r, c);
+
+
+    return 0;
+}
