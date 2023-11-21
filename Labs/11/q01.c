@@ -1,3 +1,14 @@
+/*
+ * Programmer: Riya Bhart
+ * Date: 21/11/23
+ * Description: Create a structure to specify data on students given below:
+ *Roll number, Name, Department, Course, 
+ *Year of joining Assume that there are not more than
+ *450 students in the college.
+ *● Print names of all students who joined in a particular year.
+ *● Print the data of a student whose roll number is given.
+ *             
+ */
 #include <stdio.h>
 #include <string.h>
 struct StudentData{
