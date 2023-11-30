@@ -1,63 +1,66 @@
-/*
- * Programmer: Riya Bhart
- * Date: 28/11/23
- * Description: Make 2 separate blank word files with text, "This is a test.".
- * Open them in a C program as a binary file and compare the contents. Are the 2 files equal?
- */
-#include<stdio.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
-int comparefiles (FILE *f_ptr1, FILE *f_ptr2, int *lines, int *cols){
-char ch1,ch2;
-*lines = 1;
-*cols = 0;
-do{
-ch1 = fgetc(f_ptr1);
-ch2 = fgetc(f_ptr2);
+struct EngineParts
+{
 
-if (ch1 == '\n'){
-*lines += 1;
-*cols = 0;
-}
+        int yearofmanufacture;
+        int quantity;
+        char serialnumber[4];
+        char material[25];
+};
 
-if (ch1 != ch2){
-return -1;
+void information (int numofparts, struct EngineParts parts[]){
 
-*cols += 1;
-}
-}while (ch1 != EOF && ch2 != EOF);
+int i;
+    
+        printf("information on parts with serial number between BB1 and CC6\n");
 
-if (ch1 == EOF && ch2 == EOF){
-return 0;
-}
-else {
-return -1;
-}
-}
+for(i=0; i<numofparts;i++){
+        if(parts[i].serialnumber[0]>='B'  && parts[i].serialnumber[0]<='C'
+            && parts[i].serialnumber[1]>='B' && parts[i].serialnumber[1]<='C'
+        && parts[i].serialnumber[2]>='1' && parts[i].serialnumber[2]<='6')  {
+
+        printf("Serial number: %s\n", parts[i].serialnumber);
+        printf("Year of Manufacture: %d\n", parts[i].yearofmanufacture);
+        printf("Quantity: %d\n", parts[i].quantity);
+        printf("Material: %s\n", parts[i].material);
+           
+            }
+
+        }
+    }
+
+    int main(){
+
+const int max=100;
+int i;
+
+struct EngineParts parts[max];
+
+int numofparts;
+       
+        printf("information on parts with serial number between BB1 and CC6\n");
+
+        printf("\nEnter the number of engine parts\n");
+        scanf("%d", &numofparts); 
+
+       for(i=0;i<numofparts;i++){
+            printf("Enter the details for each engine part %d\n", i+1);
+
+              printf("Enter serial number\n");
+            scanf(" %s",parts[i].serialnumber);
+             printf("Enter year of manufacture\n");
+            scanf("%d",&parts[i].yearofmanufacture);
+               printf("Enter quantity\n");
+            scanf("%d",&parts[i].quantity);
+               printf("Enter material\n");
+            scanf(" %s",parts[i].material);
+
+        }
 
 
-int main (){
-FILE *fptr1;
-fptr1 = fopen("./test1.docx", "rb");
-FILE *fptr2;
-fptr2 = fopen ("./test2.docx", "rb");
+        information(numofparts,parts);
 
-if (fptr1 == NULL || fptr2 == NULL){
-printf ("The file is not opened.The program will exit now");
-return 1;
-}
-int rows, columns;
-
-int diff = comparefiles(fptr1,fptr2,&rows,&columns);
-if (diff == 0){
-printf ("Files are equal");
-}
-else{
-printf ("Files are not equal");
-}
-
-fclose (fptr1);
-fclose (fptr2);
-return 0;
-}
-
+        return 0;
+    }
