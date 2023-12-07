@@ -4,6 +4,7 @@
  */
 #include <stdio.h>
 int main(){
+    printf("---RIYA BHART\n ---23K-0063\n");
     int n;
     printf("enter size of matrix ");
     scanf("%d",&n);
